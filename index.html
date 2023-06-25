@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSE 391: Programming for the Internet</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/variable.css" />
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <nav id="navbar_top" class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">CSE391</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#part1"
+              >Part1 <span class="sr-only">(current)</span></a
+            >
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#part2">Part 2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#part3">Part 3</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section class="part part_1" id="part1">
+      <div class="container text-center content_part">
+        <h1 class="mb-5">Weight Converter</h1>
+
+        <label>Covert:</label>
+        <input type="number" id="weight" placeholder="Enter Value" />
+
+        <select id="conversionType">
+          <option value="kgToLb">kg to lb</option>
+          <option value="lbToKg">lb to kg</option>
+        </select>
+
+        <button class="btn btn-sm btn-outline-danger mr-1" onclick="convert()">
+          Go</button
+        ><span id="result"></span>
+      </div>
+    </section>
+
+    <!-- part 2 -->
+    <section class="part part_2" id="part2">
+      <div class="container text-center content_part">
+        <h1 class="mb-5 text-capitalize">
+          Max, Min, Sum, Average and reverse order
+        </h1>
+
+        <label for="numbers">Enter a series of numbers</label>
+        <input
+          type="text"
+          id="numbers"
+          placeholder=" 1, 2, 3, 4, 5"
+          oninput="processInput()"
+        /><br />
+
+        <h2>Result:</h2>
+        <p>Max:<span id="max"></span></p>
+        <p>min:<span id="min"></span></p>
+        <p>sum:<span id="sum"></span></p>
+        <p>average:<span id="average"></span></p>
+        <p>reverse:<span id="reverse"></span></p>
+      </div>
+    </section>
+
+    <!-- part 3 -->
+    <section class="part part_3" id="part3">
+      <div class="container text-center content_part">
+        <h1 class="mb-5 text-capitalize">Magic!!!</h1>
+        <textarea id="textArea" rows="10" cols="100"></textarea><br />
+        <button class="btn btn-sm btn-outline-danger" onclick="clearTextArea()">
+          Clear All
+        </button>
+        <button
+          class="btn btn-sm btn-outline-danger"
+          onclick="capitalizeText()"
+        >
+          Capitalize
+        </button>
+        <button class="btn btn-sm btn-outline-danger" onclick="sortLines()">
+          Sort
+        </button>
+        <button class="btn btn-sm btn-outline-danger" onclick="reverseLines()">
+          Reverse
+        </button>
+        <button
+          class="btn btn-sm btn-outline-danger"
+          onclick="stripBlankLines()"
+        >
+          Strip Blank
+        </button>
+        <button
+          class="btn btn-sm btn-outline-danger"
+          onclick="addLineNumbers()"
+        >
+          Add Numbers
+        </button>
+        <button class="btn btn-sm btn-outline-danger" onclick="shuffleLines()">
+          Shuffle
+        </button>
+      </div>
+    </section>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/main.js"></script>
+    <script></script>
+  </body>
+</html>
